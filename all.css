@@ -1,0 +1,87 @@
+
+        .main.container {
+            margin-top: 7em;
+        }
+
+        .ui.footer.segment {
+            padding: 5em 0em;
+        }
+
+        .content {
+            min-height: calc(11vh - 50px);
+        }
+
+        .table th,
+        .table td {
+            padding: 0.4rem;
+        }
+
+        #profile {
+            font-size: 15px;
+            color: white;
+            background-color: #000000;
+            font-family: 微軟正黑體;
+        }
+
+        #a {
+            height: 80px;
+            opacity: 0.9;
+            font-size: 18px;
+        }
+
+        #b {
+            color: white;
+        }
+
+        #c {
+            position: fixed;
+            top: 9px;
+        }
+
+        #text {
+            float: left;
+            margin-left: 20px;
+            margin-top: 30px;
+            font-size: 15px;
+        }
+
+        #text1 {
+            color: #ABABAB;
+            width: 31%;
+            height: 400px;
+            text-align: left;
+            float: left;
+        }
+
+        #experience {
+            margin-top: 150px;
+            background: #000000;
+        }
+
+        #table {
+            margin-right: auto;
+            width: 70%;
+            text-align: center;
+            background: #000000;
+            font-size: 20px;
+            line-height: 70px;
+             color: #ABABAB;           
+        }
+
+        #list {
+            margin-left: 50px;
+            font-size: 20px;
+            width: 64%;
+        }
+
+        #innerlist {
+            color: #ABABAB;
+        }
+
+        #slide A:link {
+            color: #9b8251;
+        }
+
+        #slide A:hover {
+            color: white;
+        }

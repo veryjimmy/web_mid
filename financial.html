@@ -1,0 +1,231 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>元智小館_財務報表</title>
+    <style type="text/css">@import "semantic.min.css";</style>
+    <link rel="icon" type="image/png" href="logosmall.png" />
+    <script type="text/javascript" src="semantic.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <style type="text/css">
+        @import "all.css";
+
+    </style>
+    <style type="text/css">
+        body {
+            background: white;
+            font-family: 微軟正黑體;
+        }
+
+        #innerfinancial {
+            border: none;
+        }
+
+         #cal {
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 140px;
+            text-align: left;
+        }    
+        table th,
+        td {
+            padding: 10px;
+            color: #696969;
+            font-size: 20px;
+            height:55px;
+            width:150px;
+            border-radius: 90px;
+        }
+
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="ui fixed inverted menu" style="background-color:#5C5C5C" id=a>
+        <div id=c><a href="index.html"><img src="logo.png" style="width:60px;height:60px;margin-left: 15px"></a></div>
+        <div class="right item">
+            <a href="product1.html" class="item" id=b>菜色介紹</a>
+            <a href="financial.html" class="item" id=b>財務報表</a>
+            <a href="calendar.html" class="item" id=b>行事曆</a>
+        </div>
+    </div>
+
+    <div>
+        <p style="font-size:50px;color:black;margin-top:150px;text-align: center;color: #6C6C6C">9月10月財務報表</p>
+    </div>
+    <table id=cal>
+            <tr>
+                <td></td>
+                <td>9月</td>
+                <td>10月</td>
+            </tr>
+        <tr>
+            <td colspan=3 style="text-align: center;background:#EBEBEB">收入</td>
+        </tr>
+        <tr>
+            <td id=innerfinancial>營業收入</td>
+            <td id=innerfinancial>$200000</td>
+            <td id=innerfinancial>$210000</td>
+        </tr>
+        <tr>
+            <td colspan=3 style="text-align: center;background:#EBEBEB">支出</td>
+        </tr>
+        <tr style="background: white;">
+            <td id=innerfinancial>店租</td>
+            <td id=innerfinancial>$10000</td>
+            <td id=innerfinancial>$10000</td>
+        </tr>
+        <tr>
+            <td id=innerfinancial>水電費</td>
+            <td id=innerfinancial>$2000</td>
+            <td id=innerfinancial>$2300</td>
+        </tr>
+        <tr>
+            <td id=innerfinancial>食材費</td>
+            <td id=innerfinancial>$27000</td>
+            <td id=innerfinancial>$27300</td>
+        </tr>
+
+        <tr>
+            <td colspan=3 style="text-align: center;background:#EBEBEB">總計</td>
+        </tr>
+        <tr>
+            <td id=innerfinancial>Total</td>
+            <td id=innerfinancial>$63000</td>
+            <td id=innerfinancial>$72700</td>
+        </tr>
+    </table>
+
+
+
+    <div>
+        <p style="font-size:50px;color:black;margin-top:120px;text-align: center;color: #6C6C6C">9月10月收支圓餅圖</p>
+    </div>
+
+    <div id="container" style="min-width: 200px; height: 300px; max-width: 600px; margin: 0 auto"></div>
+    <p style="text-align: center;color: #6C6C6C"><b>10月收支圓餅圖</b></p><br><br>
+    <div id="container1" style="min-width: 310px; height: 300px; max-width: 600px; margin: 0 auto"></div>
+    <p style="text-align: center;color: #6C6C6C"><b>9月收支圓餅圖</b></p><br><br>
+
+    <div class="ui inverted vertical footer segment" style="background-color: #4D4D4D">
+        <div class="ui center aligned container">
+            <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="profile.html" id=b>成員介紹</a>&emsp;&emsp;&emsp;&emsp;
+                <a class="item" href="product1.html" id=b>菜色</a>&emsp;&emsp;&emsp;&emsp;
+                <a class="item" href="contact.html" id=b>聯絡我們</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                    name: '營業收入',
+                    y: 210000
+                },
+                {
+                    name: '店租',
+                    y: 10000
+                },
+                {
+                    name: '食材費',
+                    y: 27300
+                },
+                {
+                    name: '員工薪水',
+                    y: 100000
+                },
+            ]
+        }]
+
+
+    });
+
+    Highcharts.chart('container1', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                    name: '營業收入',
+                    y: 200000
+                },
+                {
+                    name: '店租',
+                    y: 10000
+                },
+                {
+                    name: '食材費',
+                    y: 27000
+                },
+                {
+                    name: '員工薪水',
+                    y: 100000
+                },
+            ]
+        }]
+
+
+    });
+
+</script>
